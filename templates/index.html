@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>IGREJA IPB RIO BRILHANTE MS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
       margin: 0;
@@ -11,96 +12,163 @@
     }
 
     body {
-      background-image: url('{{ url_for("static", filename="imagens/th-227327873.jpeg") }}');
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('{{ url_for("static", filename="imagens/th-22732787.jpg") }}');
       background-size: cover;
-      background-repeat: no-repeat;
       background-position: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
-      text-align: center;
       min-height: 100vh;
-      backdrop-filter: brightness(0.7);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      backdrop-filter: brightness(0.6);
     }
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      min-height: 100vh;
-      padding: 50px 20px;
+    header {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      width: 30px;
+    }
+
+    .menu-icon div {
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .menu.active {
+      display: flex;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      color: #ffe600;
-      text-shadow: 2px 2px 5px #000;
+      font-size: 2.5rem;
+      margin: 30px 0 10px;
+      text-shadow: 2px 2px 6px #000;
     }
 
     p {
-      font-size: 1.5em;
-      max-width: 700px;
+      font-size: 1.2rem;
       margin-bottom: 40px;
-      text-shadow: 1px 1px 4px #000;
+      text-shadow: 1px 1px 3px #000;
     }
 
-    .btn {
-      padding: 15px 30px;
-      font-size: 1.1em;
-      background-color: #ffe600;
-      color: #000;
+    .button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #ffc107;
+    .button:hover {
+      background-color: #0056b3;
     }
 
-    .social {
+    .instagram {
       display: flex;
       align-items: center;
-      gap: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 12px 20px;
-      border-radius: 10px;
+      justify-content: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 24px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
       text-decoration: none;
       color: #fff;
-      font-size: 1.1em;
-      font-weight: 500;
-      transition: background-color 0.3s;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
     }
 
-    .social:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+    .instagram:hover {
+      transform: scale(1.05);
     }
 
-    .social img {
-      width: 30px;
-      height: 30px;
+    .instagram img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>IGREJA IPB NOVA RIO BRILHANTE</h1>
-    <p>Seja bem-vindo ao site oficial da Igreja IPB do 14, Nova Rio Brilhante! Estamos felizes com sua visita.</p>
-    
-    <a href="#programacao" class="btn">Ver Programação</a>
 
-    <!-- Link do Instagram -->
-    <a class="social" href="https://instagram.com/ipb_nova_rio_brilhante" target="_blank">
-      <img src="{{ url_for('static', filename='imagens/instagram-icon.png') }}" alt="Instagram">
-      @ipb_nova_rio_brilhante
-    </a>
-  </div>
+  <header>
+    <div style="font-weight: bold; color: white;">IPB Nova</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="menu" class="menu">
+      <a href="#">Início</a>
+      <a href="#">Programação</a>
+      <a href="#">Contato</a>
+    </div>
+  </header>
+
+  <h1>IGREJA IPB NOVA RIO BRILHANTE</h1>
+  <p>Seja bem-vindo ao site oficial da Igreja IPB do 14, Nova Rio Brilhante!</p>
+
+  <button class="button" onclick="alert('Em breve: Programação da Igreja IPB')">Ver Programação</button>
+
+  <a href="https://instagram.com/ipb_nova_rio_brilhante" target="_blank" class="instagram">
+    <img src="{{ url_for('static', filename='imagens/instagram-icon.png') }}" alt="Instagram">
+    @ipb_nova_rio_brilhante
+  </a>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
-
