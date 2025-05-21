@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>IGREJA IPB RIO BRILHANTE MS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('{{ url_for("static", filename="imagens/th-227327873.jpeg") }}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      backdrop-filter: brightness(0.7);
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #ffe600;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 700px;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background-color: #ffe600;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .btn:hover {
+      background-color: #ffc107;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .social:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .social img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>IGREJA IPB NOVA RIO BRILHANTE</h1>
+    <p>Seja bem-vindo ao site oficial da Igreja IPB do 14, Nova Rio Brilhante! Estamos felizes com sua visita.</p>
+    
+    <a href="#programacao" class="btn">Ver Programação</a>
+
+    <!-- Link do Instagram -->
+    <a class="social" href="https://instagram.com/ipb_nova_rio_brilhante" target="_blank">
+      <img src="{{ url_for('static', filename='imagens/instagram-icon.png') }}" alt="Instagram">
+      @ipb_nova_rio_brilhante
+    </a>
+  </div>
+</body>
+</html>
+
