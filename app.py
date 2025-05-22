@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/versiculos')
-def versiculos():
+@app.route('/versiculos2')
+def versiculos2():
     return render_template('versiculos2.html')
 
 if __name__ == '__main__':
