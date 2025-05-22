@@ -16,25 +16,26 @@
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .versiculo-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 10px;
     }
 
     .versiculo {
       border: 2px solid #fff;
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 20px;
+      font-size: 1.1rem;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(4px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeIn 1s ease forwards;
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .versiculo:hover {
@@ -49,7 +50,12 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+      }
+
+      .versiculo {
+        font-size: 1rem;
+        padding: 15px;
       }
     }
   </style>
@@ -75,3 +81,9 @@
     <div class="versiculo">"Aquele que habita no esconderijo do Altíssimo..." <br>– Salmos 91:1</div>
     <div class="versiculo">"Confia no Senhor de todo o teu coração." <br>– Provérbios 3:5</div>
     <div class="versiculo">"Mas os que esperam no Senhor renovarão as suas forças." <br>– Isaías 40:31</div>
+    <div class="versiculo">"Não se turbe o vosso coração..." <br>– João 14:1</div>
+    <div class="versiculo">"Regozijai-vos sempre no Senhor." <br>– Filipenses 4:4</div>
+    <div class="versiculo">"O Senhor pelejará por vós, e vós vos calareis." <br>– Êxodo 14:14</div>
+  </div>
+</body>
+</html>
