@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Versículos Bíblicos - IPB Nova</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .versiculo-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .versiculo {
+      border: 2px solid #fff;
+      border-radius: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .versiculo:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Versículos Bíblicos</h1>
+
+  <div class="versiculo-container">
+    <div class="versiculo">"O Senhor é o meu pastor; nada me faltará." <br>– Salmos 23:1</div>
+    <div class="versiculo">"Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará." <br>– Salmos 37:5</div>
+    <div class="versiculo">"Tudo posso naquele que me fortalece." <br>– Filipenses 4:13</div>
+    <div class="versiculo">"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito..." <br>– João 3:16</div>
+    <div class="versiculo">"O Senhor é bom, um refúgio em tempos de angústia." <br>– Naum 1:7</div>
+    <div class="versiculo">"Alegrai-vos na esperança, sede pacientes na tribulação..." <br>– Romanos 12:12</div>
+    <div class="versiculo">"Lâmpada para os meus pés é a tua palavra..." <br>– Salmos 119:105</div>
+    <div class="versiculo">"Não temas, porque eu sou contigo." <br>– Isaías 41:10</div>
+    <div class="versiculo">"Bem-aventurados os que choram, porque serão consolados." <br>– Mateus 5:4</div>
+    <div class="versiculo">"Buscai ao Senhor enquanto se pode achar..." <br>– Isaías 55:6</div>
+    <div class="versiculo">"O choro pode durar uma noite, mas a alegria vem pela manhã." <br>– Salmos 30:5</div>
+    <div class="versiculo">"Sede fortes e corajosos. Não temais." <br>– Deuteronômio 31:6</div>
+    <div class="versiculo">"Em tudo dai graças." <br>– 1 Tessalonicenses 5:18</div>
+    <div class="versiculo">"O Senhor te guardará de todo mal." <br>– Salmos 121:7</div>
+    <div class="versiculo">"Aquele que habita no esconderijo do Altíssimo..." <br>– Salmos 91:1</div>
+    <div class="versiculo">"Confia no Senhor de todo o teu coração." <br>– Provérbios 3:5</div>
+    <div class="versiculo">"Mas os que esperam no Senhor renovarão as suas forças." <br>– Isaías 40:31</div>
